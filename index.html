@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Dummy Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Contenedor que centra el botón en el medio de la pantalla -->
+    <div class="d-flex justify-content-center align-items-center min-vh-100">
+        <!-- Botón para activar el modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Agrega Datos
+        </button>
+    </div>
+
+    <!-- Modal de mi formulario -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Payment form example</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Aquí comienza mi formulario -->
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="alert alert-danger" role="alert">
+                                    Some fields are missing.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-5">
+                                <label for="cardNumber" class="form-label">Card #</label>
+                                <input type="text" class="form-control" id="cardNumber"
+                                    placeholder="xxxxxxxxxxxxxxxxxx">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="cvcNumber" class="form-label">CVC #</label>
+                                <input type="text" class="form-control" id="cvcNumber" placeholder="0000">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="amount" class="form-label">Amount</label>
+                                <div class="input-group">
+                                    <div class="input-group-text">$</div>
+                                    <input type="text" class="form-control" id="autoSizingInputGroup"
+                                        placeholder="Amount">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="cityName" class"form-label">City</label>
+                                    <input type="text" class="form-control" id="cityName">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="stateName" class"form-label">State</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Pick a state</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="postalCode" class"form-label">City</label>
+                                    <input type="text" class="form-control" id="postalCode">
+                                </div>
+                            </div>
+
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="paymentMethod" class="form-label">We accept:</label>
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <div class="bg-secondary p-1 rounded">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="paymentMethodRadioOptions" id="masterCard" value="option1">
+                                                        <label class="form-check-label" for="masterCard"> <i class="fa-brands fa-cc-mastercard text-white"> </i></label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="paymentMethodRadioOptions" id="visaCard" value="option2">
+                                                        <label class="form-check-label" for="visaCard"> <i class="fa-brands fa-cc-visa text-white"></i> </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="paymentMethodRadioOptions" id="dinnersClubCard" value="option3">
+                                                        <label class="form-check-label" for="dinnersClubCard"> <i class="fa-brands fa-cc-diners-club text-white"></i> </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="paymentMethodRadioOptions" id="applePay" value="option4">
+                                                        <label class="form-check-label" for="applePay"> <i class="fa-brands fa-cc-apple-pay text-white"></i> </label>
+                                                    </div>
+                                                </div>
+                                        </div>                                        
+                                    </div>
+
+                                 </div>
+
+
+                                <!-- Columna que contiene el campo de mensaje -->
+                                <div class="col-md-6">
+                                    <label for="message" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                    <span class="text-muted">Add any notes here.</span>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+
+
+
+
+
+
+                <!-- Aqui el footer con los botoones -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
